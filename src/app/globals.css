@@ -1,56 +1,170 @@
-* { 
-  box-sizing: border-box; 
-  /* บังคับให้ทุกๆ ชิ้นส่วนบนเว็บ (รวมถึงปุ่มและลิงก์) ใช้ฟอนต์มะลิ */
-  font-family: var(--font-mali), sans-serif !important; 
-} 
+* {
+  box-sizing: border-box;
+}
 
-body { 
-  margin: 0; 
-  color: #1f2937; 
-  background: #ebd5df; 
-} 
+html {
+  background: #f7f3e8;
+}
 
-.siteHeader { 
-  background: #7e2b5b; 
-} 
+body {
+  margin: 0;
+  background: #f7f3e8;
+  color: #334338;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.navbar, 
-.page { 
-  width: min(100% - 2rem, 70rem); 
-  margin-inline: auto; 
-} 
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
 
-.navList { 
-  display: flex; 
-  gap: 1rem; 
-  margin: 0; 
-  padding: 1rem 0; 
-  list-style: none; 
-} 
+h1 {
+  margin-bottom: 8px;
+  color: #486b50;
+  font-size: 38px;
+}
 
-.navLink { 
-  color: white; 
-  text-decoration: none; 
-} 
+h2 {
+  color: #55785c;
+}
 
-.navLink:hover, 
-.navLink:focus-visible { 
-  text-decoration: underline; 
-} 
+p {
+  color: #66756a;
+}
 
-.page { 
-  padding-block: 2rem; 
-} 
+section {
+  margin-top: 24px;
+}
 
-.courseGrid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); 
-  gap: 1rem; 
-} 
+/* Search */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #486b50;
+  font-weight: bold;
+}
 
-.courseCard { 
-  padding: 1rem; 
-  border: 1px solid #d1d5db; 
-  border-radius: 0.75rem; 
-  background: white; 
+input,
+select {
+  width: 100%;
+  max-width: 500px;
+  padding: 11px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #cbd8c7;
+  border-radius: 12px;
+  background: #fffdf7;
+  color: #334338;
+  font-size: 15px;
+  outline: none;
+  .search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 560px;
+}
+
+.search-box input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.search-box button {
+  width: 48px;
+  height: 44px;
+  margin-right: 0;
+  padding: 0;
+  border-radius: 12px;
+  font-size: 18px;
+}
+}
+
+input:focus,
+select:focus {
+  border-color: #7c9d7d;
+  box-shadow: 0 0 0 3px #dfe9dc;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  padding: 24px;
+  border: 1px solid #d8e1d3;
+  border-radius: 20px;
+  background: #fffdf7;
+  box-shadow: 0 8px 25px rgba(72, 107, 80, 0.08);
+}
+
+form div {
+  margin-bottom: 14px;
+}
+
+button {
+  margin-right: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #789b78;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #5f835f;
+  transform: translateY(-1px);
+}
+
+button[type="button"] {
+  background: #d9bfa5;
+}
+
+button[type="button"]:hover {
+  background: #c9a98a;
+}
+
+/* Game cards */
+article {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #d8e1d3;
+  border-radius: 20px;
+  background: #fffdf7;
+  box-shadow: 0 6px 20px rgba(72, 107, 80, 0.07);
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+article h2 a {
+  color: #3f774a;
+  text-decoration: none;
+}
+
+article h2 a:hover {
+  color: #789b78;
+}
+
+article p {
+  margin: 8px 0;
+}
+
+article select {
+  max-width: 250px;
+  margin-top: 4px;
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #d8e1d3;
+}
+
+/* Error */
+p[id$="-error"] {
+  margin-top: -8px;
+  color: #b76e5d;
+  font-size: 14px;
 }
